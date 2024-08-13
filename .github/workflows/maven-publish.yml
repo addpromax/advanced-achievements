@@ -24,4 +24,11 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: AA
-          path: target\*
+          path: advanced-achievements-plugin\target\AdvancedAchievements.jar
+          
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: advanced-achievements-plugin\target\AdvancedAchievements.jar
+          draft: true
+          fail_on_unmatched_files: true
